@@ -1,0 +1,148 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "org.antlr",
+    "module": "antlr5-tool",
+    "version": "0.0.1-SNAPSHOT",
+    "attributes": {
+      "org.gradle.status": "integration"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.6"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "org.antlr",
+          "module": "antlr5-core-runtime",
+          "version": {
+            "requires": "0.0.1-SNAPSHOT"
+          }
+        },
+        {
+          "group": "org.antlr",
+          "module": "antlr5-java-runtime",
+          "version": {
+            "requires": "0.0.1-SNAPSHOT"
+          }
+        },
+        {
+          "group": "org.antlr",
+          "module": "antlr-runtime",
+          "version": {
+            "requires": "3.5.3"
+          }
+        },
+        {
+          "group": "org.antlr",
+          "module": "ST4",
+          "version": {
+            "requires": "4.3.4"
+          }
+        },
+        {
+          "group": "org.abego.treelayout",
+          "module": "org.abego.treelayout.core",
+          "version": {
+            "requires": "1.0.3"
+          }
+        },
+        {
+          "group": "com.ibm.icu",
+          "module": "icu4j",
+          "version": {
+            "requires": "72.1"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "antlr5-tool-0.0.1-SNAPSHOT.jar",
+          "url": "antlr5-tool-0.0.1-SNAPSHOT.jar",
+          "size": 261,
+          "sha512": "10b9066279b031cb7b6d1c3e5808eba83e00fc9933d0900460402b47df1b3705994bb873f7a4ecd309f16ee7868baa46ac8cb90b1e6eead2989e791e9688e0da",
+          "sha256": "34e0645f476cb19b4341e8f53904a37d4cbafe58b20c0e9373abc0048f395959",
+          "sha1": "a8a4a9647cc21356b1cbd97c6a14b2bf27608b56",
+          "md5": "66d2973ed3fb84358914777e3fd4620d"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "org.antlr",
+          "module": "antlr5-core-runtime",
+          "version": {
+            "requires": "0.0.1-SNAPSHOT"
+          }
+        },
+        {
+          "group": "org.antlr",
+          "module": "antlr5-java-runtime",
+          "version": {
+            "requires": "0.0.1-SNAPSHOT"
+          }
+        },
+        {
+          "group": "org.antlr",
+          "module": "antlr-runtime",
+          "version": {
+            "requires": "3.5.3"
+          }
+        },
+        {
+          "group": "org.antlr",
+          "module": "ST4",
+          "version": {
+            "requires": "4.3.4"
+          }
+        },
+        {
+          "group": "org.abego.treelayout",
+          "module": "org.abego.treelayout.core",
+          "version": {
+            "requires": "1.0.3"
+          }
+        },
+        {
+          "group": "com.ibm.icu",
+          "module": "icu4j",
+          "version": {
+            "requires": "72.1"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "antlr5-tool-0.0.1-SNAPSHOT.jar",
+          "url": "antlr5-tool-0.0.1-SNAPSHOT.jar",
+          "size": 261,
+          "sha512": "10b9066279b031cb7b6d1c3e5808eba83e00fc9933d0900460402b47df1b3705994bb873f7a4ecd309f16ee7868baa46ac8cb90b1e6eead2989e791e9688e0da",
+          "sha256": "34e0645f476cb19b4341e8f53904a37d4cbafe58b20c0e9373abc0048f395959",
+          "sha1": "a8a4a9647cc21356b1cbd97c6a14b2bf27608b56",
+          "md5": "66d2973ed3fb84358914777e3fd4620d"
+        }
+      ]
+    }
+  ]
+}

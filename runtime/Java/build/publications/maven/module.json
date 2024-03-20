@@ -1,0 +1,92 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "org.antlr",
+    "module": "antlr5-java-runtime",
+    "version": "0.0.1-SNAPSHOT",
+    "attributes": {
+      "org.gradle.status": "integration"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.6"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.0.0-Beta4"
+          }
+        },
+        {
+          "group": "org.antlr",
+          "module": "antlr5-core-runtime",
+          "version": {
+            "requires": "0.0.1-SNAPSHOT"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "antlr5-java-runtime-0.0.1-SNAPSHOT.jar",
+          "url": "antlr5-java-runtime-0.0.1-SNAPSHOT.jar",
+          "size": 71335,
+          "sha512": "62af17cdcb2a228be70856b3e8cf14bea47247aaf799c58e9e7b383ea12233b9be443ec139f3829c877b26cc06401873fcbbc548b4a12322923e6a44840ae2c8",
+          "sha256": "558355e103b513ad1016300f33f99cce09fb6dc5af15380146c49ffd326b6bf7",
+          "sha1": "740e959cfe72b7132d12ed62878e9a1d6d0ba3ab",
+          "md5": "89baad1cf62fdfecd9ccd2900da76a45"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.0.0-Beta4"
+          }
+        },
+        {
+          "group": "org.antlr",
+          "module": "antlr5-core-runtime",
+          "version": {
+            "requires": "0.0.1-SNAPSHOT"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "antlr5-java-runtime-0.0.1-SNAPSHOT.jar",
+          "url": "antlr5-java-runtime-0.0.1-SNAPSHOT.jar",
+          "size": 71335,
+          "sha512": "62af17cdcb2a228be70856b3e8cf14bea47247aaf799c58e9e7b383ea12233b9be443ec139f3829c877b26cc06401873fcbbc548b4a12322923e6a44840ae2c8",
+          "sha256": "558355e103b513ad1016300f33f99cce09fb6dc5af15380146c49ffd326b6bf7",
+          "sha1": "740e959cfe72b7132d12ed62878e9a1d6d0ba3ab",
+          "md5": "89baad1cf62fdfecd9ccd2900da76a45"
+        }
+      ]
+    }
+  ]
+}

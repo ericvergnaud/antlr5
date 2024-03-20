@@ -1,0 +1,78 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "org.antlr",
+    "module": "antlr5-tool-testsuite",
+    "version": "0.0.1-SNAPSHOT",
+    "attributes": {
+      "org.gradle.status": "integration"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.6"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.0.0-Beta4"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "antlr5-tool-testsuite-0.0.1-SNAPSHOT.jar",
+          "url": "antlr5-tool-testsuite-0.0.1-SNAPSHOT.jar",
+          "size": 261,
+          "sha512": "9323a11a4fd2aaf2dcd5096f2650930c91432cecbca6518e93212eec271516812f923e5187d5f9e2e93dd333116e149fd01d9e01a7008a07dc25951aa236ef51",
+          "sha256": "0e2774afe2c92098bdc9a70e89a3140cd1d0a5ca0eb51ced7ab5b729854b154a",
+          "sha1": "53a4f7414673dfe035050a524be08af83bfeb889",
+          "md5": "71482ef27a218da11f75ccb72d7b3056"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.0.0-Beta4"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "antlr5-tool-testsuite-0.0.1-SNAPSHOT.jar",
+          "url": "antlr5-tool-testsuite-0.0.1-SNAPSHOT.jar",
+          "size": 261,
+          "sha512": "9323a11a4fd2aaf2dcd5096f2650930c91432cecbca6518e93212eec271516812f923e5187d5f9e2e93dd333116e149fd01d9e01a7008a07dc25951aa236ef51",
+          "sha256": "0e2774afe2c92098bdc9a70e89a3140cd1d0a5ca0eb51ced7ab5b729854b154a",
+          "sha1": "53a4f7414673dfe035050a524be08af83bfeb889",
+          "md5": "71482ef27a218da11f75ccb72d7b3056"
+        }
+      ]
+    }
+  ]
+}

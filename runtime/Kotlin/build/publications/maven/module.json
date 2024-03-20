@@ -1,0 +1,96 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "org.antlr",
+    "module": "antlr5-kotlin-runtime",
+    "version": "0.0.1-SNAPSHOT",
+    "attributes": {
+      "org.gradle.status": "integration"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.6"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.0.0-Beta4"
+          }
+        },
+        {
+          "group": "org.antlr",
+          "module": "antlr5-core-runtime",
+          "version": {
+            "requires": "0.0.1-SNAPSHOT"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "antlr5-kotlin-runtime-0.0.1-SNAPSHOT.jar",
+          "url": "antlr5-kotlin-runtime-0.0.1-SNAPSHOT.jar",
+          "size": 261,
+          "sha512": "31bfcfd32d52cb48feb5d8760116950554abe529089e47aa67c0b04b16806f0a85801663be264209c0f8c35707d7fcd85f750c6fe78e44ae52b3236e3c2c4e52",
+          "sha256": "67ac30a9a82548192bd3c7d876e9a0a89e34b08b27d5b8024be5082ebe04bf46",
+          "sha1": "81f0564f45fd8027c5080f226bccc8fb8c99d163",
+          "md5": "f6878fb96eaeae46bc2bb7077a39583d"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.0.0-Beta4"
+          }
+        },
+        {
+          "group": "org.antlr",
+          "module": "antlr5-core-runtime",
+          "version": {
+            "requires": "0.0.1-SNAPSHOT"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "antlr5-kotlin-runtime-0.0.1-SNAPSHOT.jar",
+          "url": "antlr5-kotlin-runtime-0.0.1-SNAPSHOT.jar",
+          "size": 261,
+          "sha512": "31bfcfd32d52cb48feb5d8760116950554abe529089e47aa67c0b04b16806f0a85801663be264209c0f8c35707d7fcd85f750c6fe78e44ae52b3236e3c2c4e52",
+          "sha256": "67ac30a9a82548192bd3c7d876e9a0a89e34b08b27d5b8024be5082ebe04bf46",
+          "sha1": "81f0564f45fd8027c5080f226bccc8fb8c99d163",
+          "md5": "f6878fb96eaeae46bc2bb7077a39583d"
+        }
+      ]
+    }
+  ]
+}

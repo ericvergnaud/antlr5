@@ -1,7 +1,7 @@
 # Maven build folders
 target/
 # ... but not code generation targets
-!tool/src/org/antlr/v5/codegen/target/
+!tool/src/main/java/org/antlr/v5/codegen/target/
 
 # MacOSX files
 .DS_Store
