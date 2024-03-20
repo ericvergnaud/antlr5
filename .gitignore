@@ -63,3 +63,4 @@ coverage/
 # Go test and performance trace files
 runtime-testsuite/gen
 tool-testsuite/gen
+.mvn/.gradle-enterprise/
