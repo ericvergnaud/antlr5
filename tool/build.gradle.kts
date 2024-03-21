@@ -39,7 +39,7 @@ abstract class CleanupAntlr3GeneratedSource : DefaultTask() {
         var text = path.toFile().readText(Charsets.UTF_8)
         val replacements = listOf(Pair("(// .ANTLR .+) ....-..-.. ..:..:..", "$1"),
             Pair("(// elements: ).*", "$1"))
-        replacements.forEach({ pair: Pair<String, String> -> text = text.replace(pair.first, pair.second) })
+        replacements.forEach({ pair: Pair<String, String> -> text = text.replace(Regex(pair.first), pair.second) })
         path.toFile().writeText(text, Charsets.UTF_8)
     }
 
