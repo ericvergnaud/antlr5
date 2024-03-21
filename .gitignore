@@ -1,7 +1,6 @@
-# Maven build folders
-target/
-# ... but not code generation targets
-!tool/src/main/java/org/antlr/v5/codegen/target/
+# Gradle build folders
+build/
+.gradle/
 
 # MacOSX files
 .DS_Store
@@ -38,7 +37,6 @@ nbactions*.xml
 
 # Generated files
 /out/
-/build/
 /gen/
 /gen3/
 /gen4/
@@ -48,6 +46,7 @@ tmp/
 **/generatedCode/*.tokens
 **/generatedCode/*.bak
 
+*.class
 *.jar
 .vscode
 
@@ -55,17 +54,9 @@ tmp/
 javac-services.0.log
 javac-services.0.log.lck
 
-# Swift binaries
-.build/
-
 # Code coverage reports
 coverage/
 
-# Go test and performance trace files
-runtime-testsuite/gen
-tool-testsuite/gen
-
 # Gradle files
 .mvn/.gradle-enterprise/
-.gradle/
-build-logic/.gradle/
+tool-testsuite/gen

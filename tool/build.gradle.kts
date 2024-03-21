@@ -4,6 +4,8 @@
  * This project uses @Incubating APIs which are subject to change.
  */
 
+import kotlin.io.path.*
+
 plugins {
     id("buildlogic.java-conventions")
     antlr
@@ -21,51 +23,39 @@ dependencies {
 
 description = "ANTLR 5 Tool"
 
-abstract class MigrateAntlr3ToAntlr5Task : DefaultTask() {
+abstract class CleanupAntlr3GeneratedSource : DefaultTask() {
+
+    @get:InputFiles
+    abstract val directory: DirectoryProperty
 
     @TaskAction
-    fun migrate() {
-        println("Hello from MigrateAntlr3ToAntlr5Task")
+    fun cleanup() {
+        val path = directory.get().getAsFile().toPath()
+        path.listDirectoryEntries("*.java").forEach(this::cleanupOneFile)
+    }
+
+    fun cleanupOneFile(path: java.nio.file.Path) {
+        println("Cleaning-up v3 generated source: " + path)
+        var text = path.toFile().readText(Charsets.UTF_8)
+        val replacements = listOf(Pair("(// .ANTLR .+) ....-..-.. ..:..:..", "$1"),
+            Pair("(// elements: ).*", "$1"))
+        replacements.forEach({ pair: Pair<String, String> -> text = text.replace(pair.first, pair.second) })
+        path.toFile().writeText(text, Charsets.UTF_8)
     }
 
 }
 
-tasks.register<MigrateAntlr3ToAntlr5Task>("migrateGeneratedParsers")
-
-/*
-abstract class InstantiateStringTemplateTask : DefaultTask() {
-
-    @get:Input
-    abstract val template: Property<String>
-
-    @get:Input
-    abstract val controller: Property<String>
-
-    @get:Input
-    abstract val target: Property<String>
-
-    @TaskAction
-    fun generate() {
-        println("Hello from InstantiateStringTemplateTask")
-        println("Template: " + template.get())
-        println("Controller: " + controller.get())
-        println("Target: " + target.get())
-        val controllerClass = compileAndLoadControllerClass()
-    }
-
-    fun compileAndLoadControllerClass() {
-
-    }
-
+tasks.register<CleanupAntlr3GeneratedSource>("cleanupGeneratedCode") {
+    dependsOn(":antlr5-tool:generateGrammarSource")
+    directory = file("${layout.buildDirectory.get()}/generated-src/antlr/main/org/antlr/v5/codegen/")
 }
 
-tasks.register<InstantiateStringTemplateTask>("generateUnicodeData") {
-    template = "src/main/resources/org/antlr/v5/templates/unicodedata.st"
-    controller = "org.antlr.v5.unicode.UnicodeDataTemplateController"
-    target = "build/generated-src/main/org/antlr/v5/unicode/UnicodeData.java"
+tasks.register<CleanupAntlr3GeneratedSource>("cleanupGeneratedParsers") {
+    dependsOn(":antlr5-tool:generateGrammarSource")
+    directory = file("${layout.buildDirectory.get()}/generated-src/antlr/main/org/antlr/v5/parse/")
 }
-*/
+
 
 tasks.named("compileJava") {
-    dependsOn("migrateGeneratedParsers" /*, "generateUnicodeData" */)
+    dependsOn("cleanupGeneratedCode", "cleanupGeneratedParsers")
 }
