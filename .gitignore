@@ -38,6 +38,7 @@ nbactions*.xml
 
 # Generated files
 /out/
+/build/
 /gen/
 /gen3/
 /gen4/
@@ -63,4 +64,8 @@ coverage/
 # Go test and performance trace files
 runtime-testsuite/gen
 tool-testsuite/gen
+
+# Gradle files
 .mvn/.gradle-enterprise/
+.gradle/
+build-logic/.gradle/
