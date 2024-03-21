@@ -20,3 +20,52 @@ dependencies {
 }
 
 description = "ANTLR 5 Tool"
+
+abstract class MigrateAntlr3ToAntlr5Task : DefaultTask() {
+
+    @TaskAction
+    fun migrate() {
+        println("Hello from MigrateAntlr3ToAntlr5Task")
+    }
+
+}
+
+tasks.register<MigrateAntlr3ToAntlr5Task>("migrateGeneratedParsers")
+
+/*
+abstract class InstantiateStringTemplateTask : DefaultTask() {
+
+    @get:Input
+    abstract val template: Property<String>
+
+    @get:Input
+    abstract val controller: Property<String>
+
+    @get:Input
+    abstract val target: Property<String>
+
+    @TaskAction
+    fun generate() {
+        println("Hello from InstantiateStringTemplateTask")
+        println("Template: " + template.get())
+        println("Controller: " + controller.get())
+        println("Target: " + target.get())
+        val controllerClass = compileAndLoadControllerClass()
+    }
+
+    fun compileAndLoadControllerClass() {
+
+    }
+
+}
+
+tasks.register<InstantiateStringTemplateTask>("generateUnicodeData") {
+    template = "src/main/resources/org/antlr/v5/templates/unicodedata.st"
+    controller = "org.antlr.v5.unicode.UnicodeDataTemplateController"
+    target = "build/generated-src/main/org/antlr/v5/unicode/UnicodeData.java"
+}
+*/
+
+tasks.named("compileJava") {
+    dependsOn("migrateGeneratedParsers" /*, "generateUnicodeData" */)
+}
